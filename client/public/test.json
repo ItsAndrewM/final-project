@@ -1,0 +1,64 @@
+//lists db
+//list collection
+
+[
+    {
+        "name": "list name",
+        "_id": "list id (generated)", 
+        "author": "and4mon1um@gmail.com",
+        "movies" : [
+            {
+                "movie_title": "title",
+            },
+            {
+                "movie_title": "title",
+        
+            },
+            {
+                "movie_title": "title",
+        
+            }
+        ]
+    },
+    {
+        "name": "list name",
+        "_id": "list id (generated)", 
+        "author": "and4mon1um@gmail.com",
+        "movies" : [
+            {
+                "movie_title": "title",
+            },
+            {
+                "movie_title": "title",
+        
+            },
+            {
+                "movie_title": "title",
+        
+            }
+        ]
+    },
+]
+
+[
+    {
+        "_id": "_id",
+        "review": [
+            {
+            "movie": {
+
+            }
+        }
+
+        ]
+        
+    },
+    {
+        "_id": "_id",
+        "lists": {
+            "list_name": [
+                    
+            ]
+        }
+    }
+]
