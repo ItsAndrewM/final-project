@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage": "http://filmlabs.ca/",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8000",

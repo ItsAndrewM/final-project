@@ -15,7 +15,7 @@ const HeroImage = () => {
             navigate('/account')
         }
         else {
-            navigate('/registration')
+            navigate('/register')
         }
     }
 
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70%;
+    height: 100%;
     border: none;
     box-shadow: rgba(16, 55, 120, 0.3) 0px 1px 2px 0px, rgba(21, 31, 48, 0.15) 0px 1px 3px 1px;
     margin-top: 20px;
