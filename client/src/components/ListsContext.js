@@ -10,7 +10,7 @@ export const ListsProvider = ({children}) => {
     const {listState} = useContext(UserContext);
 
     useEffect(() => {
-        fetch('/users/lists')
+        fetch(`${process.env.FILMLABS_URL}/users/lists`)
         .then((data) => {
             return data.json();
         })

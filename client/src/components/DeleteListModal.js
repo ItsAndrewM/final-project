@@ -35,7 +35,7 @@ const DeleteListModal = ({deleteList, setDeleteList, title}) => {
     const handleDelete = (e) => {
         e.preventDefault();
         
-        fetch(`/users/${user.email}/lists`, {
+        fetch(`${process.env.FILMLABS_URL}/users/${user.email}/lists`, {
             method: "DELETE",
             headers: {
                 Accept: "application/json",

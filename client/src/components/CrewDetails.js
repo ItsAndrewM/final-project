@@ -34,7 +34,7 @@ const CrewDetails = () => {
 
     //fetching crew data from a useLocation hook to get the id
     useEffect(() => {
-        fetch(`/actor/${location.state.id}`)
+        fetch(`${process.env.FILMLABS_URL}/actor/${location.state.id}`)
         .then((data) => {
             return data.json();
         })
@@ -51,7 +51,7 @@ const CrewDetails = () => {
 
     //then, if they appeared in movies as a cast member or crew member is fetched
     useEffect(() => {
-        fetch(`/actor/${location.state.id}/movie_credits`)
+        fetch(`${process.env.FILMLABS_URL}/actor/${location.state.id}/movie_credits`)
         .then((data) => {
             return data.json();
         })

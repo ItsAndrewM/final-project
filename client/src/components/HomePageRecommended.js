@@ -12,7 +12,7 @@ const HomePageRecommended = () => {
 
     useEffect(() => {
         // const lastIndex = userListsKeys.length - 1;
-        fetch(`/movie/${userLists.lists[userListsKeys[0]][0].id}/recommendations`)
+        fetch(`${process.env.FILMLABS_URL}/movie/${userLists.lists[userListsKeys[0]][0].id}/recommendations`)
         .then((data) => {
             return data.json();
         })

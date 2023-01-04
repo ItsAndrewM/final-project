@@ -11,9 +11,9 @@ export const MoviesProvider = ({children}) => {
 
     useEffect(() => {
         Promise.all([
-            fetch('/movies/upcoming'),
-            fetch('/movies/top_rated'),
-            fetch('/movies/popular'),
+            fetch(`${process.env.FILMLABS_URL}/movies/upcoming`),
+            fetch(`${process.env.FILMLABS_URL}/movies/top_rated`),
+            fetch(`${process.env.FILMLABS_URL}/movies/popular`),
         ])
         .then(([resUpcoming, resTopRated, resPopular]) => {
             return Promise.all([resUpcoming.json(), resTopRated.json(), resPopular.json()])
