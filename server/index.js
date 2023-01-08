@@ -37,7 +37,7 @@ express()
 
     .use(express.json())
 
-    use("/", express.static(__dirname + "/"))
+    .use("/", express.static(__dirname + "/"))
     .use(cors({
     origin: ['https://movielabs.onrender.com']
     }))
