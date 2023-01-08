@@ -2,6 +2,7 @@ const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const cors = require('cors');
+const port = process.env.FILMLABS_URL || 8000;
 
 const { deleteList } = require('./handlers/deleteList');
 const { deleteListItem } = require('./handlers/deleteListItem');
@@ -30,7 +31,7 @@ const { postList } = require('./handlers/postList');
 const { postReview } = require('./handlers/postReview');
 const { updateUserReview } = require('./handlers/updateUserReview');
 
-const port = 8000;
+
 
 express()
 
