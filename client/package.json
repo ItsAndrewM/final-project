@@ -3,7 +3,7 @@
   "homepage": "http://filmlabs.ca/",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8000",
+  "proxy": "https://movielabs-server.onrender.com",
   "dependencies": {
     "@auth0/auth0-react": "^1.12.0",
     "@emotion/react": "^11.10.5",
