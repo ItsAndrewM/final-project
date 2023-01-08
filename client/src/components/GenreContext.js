@@ -7,7 +7,7 @@ export const GenreProvider = ({children}) => {
     const [genres, setGenres] = useState();
 
     useEffect(() => {
-        fetch(`${process.env.FILMLABS_URL}/movies/genre`)
+        fetch(`/movies/genre`)
         .then((data) => {
             return data.json();
         })

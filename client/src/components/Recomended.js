@@ -7,7 +7,7 @@ const Recomended = ({location}) => {
     const [recommendedMovies, setRecommendedMovies] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.FILMLABS_URL}/movie/${location.state.id}/recommendations`)
+        fetch(`/movie/${location.state.id}/recommendations`)
         .then((data) => {
             return data.json();
         })

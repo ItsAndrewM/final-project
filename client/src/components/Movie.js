@@ -41,7 +41,7 @@ const Movie = () => {
     useEffect(() => {
         setSeen(false)
         //if a movie has been seen by a user it can be clicked on and marked as seen if not, page resets state on a rerender
-        fetch(`${process.env.FILMLABS_URL}/movie/${location.state.id}`)
+        fetch(`/movie/${location.state.id}`)
         .then((data) => {
             return data.json();
         })
@@ -56,7 +56,7 @@ const Movie = () => {
 
     //this fetch is for any credits for actors AND crew for a specific movie
     useEffect(() => {
-        fetch(`${process.env.FILMLABS_URL}/movie/${location.state.id}/credits`)
+        fetch(`/movie/${location.state.id}/credits`)
         .then((data) => {
             return data.json();
         })

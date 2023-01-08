@@ -78,7 +78,7 @@ const Ratings = ({title, id, result}) => {
                 rating: userRating*2
             })
         }
-        fetch(`${process.env.FILMLABS_URL}/movie/${id}/review`, {
+        fetch(`/movie/${id}/review`, {
             method: "POST",
             headers: {
                 Accept: "application/json",

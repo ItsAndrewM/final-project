@@ -17,6 +17,7 @@
     "@testing-library/user-event": "^13.5.0",
     "auth0-js": "^9.19.2",
     "boxicons": "^2.1.4",
+    "env": "^0.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",

@@ -9,7 +9,7 @@ const Search = () => {
     const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.FILMLABS_URL}/search/movies/${movie}`)
+        fetch(`/search/movies/${movie}`)
         .then((data) => {
             return data.json();
         })

@@ -32,7 +32,7 @@ const Lists = ({result}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`${process.env.FILMLABS_URL}/users/${user.email}/lists`, {
+        fetch(`/users/${user.email}/lists`, {
             method: "POST",
             headers: {
                 Accept: "application/json",
