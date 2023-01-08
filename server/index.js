@@ -39,10 +39,10 @@ express()
 
     .use(express.json())
 
-    // .use("/", express.static(__dirname + "/"))
-    // .use(cors({
-    // origin: ['https://movielabs-server.onrender.com']
-    // }))
+    .use("/", express.static(__dirname + "/"))
+    .use(cors({
+    origin: ['https://movielabs-server.onrender.com']
+    }))
 
     .get('/search/movies/:movie', handleFindMovie)
     .get('/search/people/:person', handleFindPerson)
