@@ -1,6 +1,8 @@
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const cors = require('cors');
+
 const { deleteList } = require('./handlers/deleteList');
 const { deleteListItem } = require('./handlers/deleteListItem');
 const { deleteUserReview } = require('./handlers/deleteUserReview');
