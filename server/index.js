@@ -42,7 +42,7 @@ express()
 
     .use("/", express.static(__dirname + "/"))
     .use(cors({
-    origin: ['https://movielabs-server.onrender.com']
+        origin: ['https://movielabs-server.onrender.com', 'https://movielabs.onrender.com/']
     }))
 
     .get('/search/movies/:movie', handleFindMovie)
