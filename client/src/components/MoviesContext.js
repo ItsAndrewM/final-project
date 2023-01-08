@@ -10,9 +10,9 @@ export const MoviesProvider = ({children}) => {
     const [topRated, setTopRated] = useState();
     useEffect(() => {
         Promise.all([
-            fetch(`/movies/upcoming`),
-            fetch(`/movies/top_rated`),
-            fetch(`/movies/popular`),
+            fetch(`https://movielabs-server.onrender.com/movies/upcoming`),
+            fetch(`https://movielabs-server.onrender.com/movies/top_rated`),
+            fetch(`https://movielabs-server.onrender.com/movies/popular`),
         ])
         .then(([resUpcoming, resTopRated, resPopular]) => {
             return Promise.all([resUpcoming.json(), resTopRated.json(), resPopular.json()])
