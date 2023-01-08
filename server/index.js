@@ -1,8 +1,8 @@
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const cors = require('cors');
-const port = process.env.FILMLABS_URL || 8000;
+// const cors = require('cors');
+const port = 8000;
 
 const { deleteList } = require('./handlers/deleteList');
 const { deleteListItem } = require('./handlers/deleteListItem');
@@ -40,10 +40,10 @@ express()
 
     .use(express.json())
 
-    .use("/", express.static(__dirname + "/"))
-    .use(cors({
-    origin: ['https://movielabs-server.onrender.com']
-    }))
+    // .use("/", express.static(__dirname + "/"))
+    // .use(cors({
+    // origin: ['https://movielabs-server.onrender.com']
+    // }))
 
     .get('/search/movies/:movie', handleFindMovie)
     .get('/search/people/:person', handleFindPerson)
