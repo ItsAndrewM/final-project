@@ -8,9 +8,12 @@ export const MoviesProvider = ({children}) => {
     const [popular, setPopular] = useState();
     const [upcoming, setUpcoming] = useState();
     const [topRated, setTopRated] = useState();
+
+
+
     useEffect(() => {
         Promise.all([
-            fetch(`https://movielabs-server.onrender.com/movies/upcoming`),
+            fetch(`${process.env.REACT_APP_FILMLABS_URL}/movies/upcoming`),
             fetch(`https://movielabs-server.onrender.com/movies/top_rated`),
             fetch(`https://movielabs-server.onrender.com/movies/popular`),
         ])
