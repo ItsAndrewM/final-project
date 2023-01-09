@@ -9,13 +9,13 @@ export const MoviesProvider = ({children}) => {
     const [upcoming, setUpcoming] = useState();
     const [topRated, setTopRated] = useState();
 
-
+    console.log(process.env.REACT_APP_FILMLABS_URL)
 
     useEffect(() => {
         Promise.all([
             fetch(`${process.env.REACT_APP_FILMLABS_URL}/movies/upcoming`),
-            fetch(`https://movielabs-server.onrender.com/movies/top_rated`),
-            fetch(`https://movielabs-server.onrender.com/movies/popular`),
+            fetch(`${process.env.REACT_APP_FILMLABS_URL}/movies/top_rated`),
+            fetch(`${process.env.REACT_APP_FILMLABS_URL}/movies/popular`),
         ])
         .then(([resUpcoming, resTopRated, resPopular]) => {
             return Promise.all([resUpcoming.json(), resTopRated.json(), resPopular.json()])
