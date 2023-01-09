@@ -20,7 +20,7 @@ const Account = () => {
 
     //this useeffect triggers whenever a review or list is changed by using a reducer and useContext
     useEffect(() => {
-        if (userLists) {
+        if (userLists.length !== 0) {
             setKeys(Object.keys(userLists.lists))
         }
     }, [listState, state, userReviews, userLists])
