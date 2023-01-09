@@ -43,7 +43,7 @@ const EditModal = ({item, setEdit, edit}) => {
     const handleClick = (e) => {
         e.preventDefault();
         
-        fetch(`/movie/${item.movie.id}/review`, {
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/movie/${item.movie.id}/review`, {
             method: "PATCH",
             headers: {
                 Accept: "application/json",

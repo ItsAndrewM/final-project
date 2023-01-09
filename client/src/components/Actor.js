@@ -52,7 +52,7 @@ const Actor = () => {
 
     //this fetch gets information regarding movie credits of an actor for both when they were in the cast and in the crew
     useEffect(() => {
-        fetch(`/actor/${location.state.id}/movie_credits`)
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/actor/${location.state.id}/movie_credits`)
         .then((data) => {
             return data.json();
         })

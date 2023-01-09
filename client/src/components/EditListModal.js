@@ -34,7 +34,7 @@ const EditListModal = ({item, setEdit, edit, title}) => {
     const handleDelete = (e) => {
         e.preventDefault();
         
-        fetch(`/users/${item.author}/lists`, {
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/users/${item.author}/lists`, {
             method: "PATCH",
             headers: {
                 Accept: "application/json",

@@ -32,7 +32,7 @@ const DeleteModal = ({item, setDeleteReview, deleteReview}) => {
     const handleDelete = (e) => {
         e.preventDefault();
         
-        fetch(`/movie/${item.movie.id}/review`, {
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/movie/${item.movie.id}/review`, {
             method: "DELETE",
             headers: {
                 Accept: "application/json",

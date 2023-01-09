@@ -13,7 +13,7 @@ const GenreDetails = () => {
 
     //use effect that handles the fetch from useLocation state.id
     useEffect(() => {
-        fetch(`/movies/genre/${location.state.id}`)
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/movies/genre/${location.state.id}`)
         .then((data) => {
             return data.json();
         })

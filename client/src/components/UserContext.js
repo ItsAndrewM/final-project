@@ -81,8 +81,8 @@ export const UserProvider = ({children}) => {
     useEffect(() => {
         if (isAuthenticated === true) {
             Promise.all([
-                fetch(`/users/${user.email}/review`),
-                fetch(`/users/${user.email}/lists`),
+                fetch(`${process.env.REACT_APP_FILMLABS_URL}/users/${user.email}/review`),
+                fetch(`${process.env.REACT_APP_FILMLABS_URL}/users/${user.email}/lists`),
             ])
             .then(([data, dataLists]) => {
                 return Promise.all([data.json(), dataLists.json()]);

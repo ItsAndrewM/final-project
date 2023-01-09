@@ -10,7 +10,7 @@ const SearchPeople = () => {
 
     //handles fetching people (includes cast and crew)
     useEffect(() => {
-        fetch(`/search/people/${person}`)
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/search/people/${person}`)
         .then((data) => {
             return data.json();
         })

@@ -11,8 +11,8 @@ const Reviews = ({location}) => {
     //both user and existing reviews are collected
     useEffect(() => {
         Promise.all([
-        fetch(`/movie/${location.state.id}/reviews`),
-        fetch(`/movie/${location.state.id}/userReviews`),
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/movie/${location.state.id}/reviews`),
+        fetch(`${process.env.REACT_APP_FILMLABS_URL}/movie/${location.state.id}/userReviews`),
         ])
         .then(([data, dataMongo]) => {
             return Promise.all([data.json(), dataMongo.json()]);
