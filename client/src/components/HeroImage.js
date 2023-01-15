@@ -23,7 +23,7 @@ const HeroImage = () => {
         <Wrapper>
             <HeroTextWrapper>
                 <HeroText>Movies you forget to remember with faces you never forget.</HeroText>
-                <HeroText>Log movies you've seen, enjoyed or hated and Keep track of films you're just dieing to see.</HeroText>
+                <HeroText>Log movies you've seen, enjoyed or hated and Keep track of films you're just dying to see.</HeroText>
                 {!isAuthenticated ? 
                 <HeroButton onClick={handleClick}>get started</HeroButton>
                 :
