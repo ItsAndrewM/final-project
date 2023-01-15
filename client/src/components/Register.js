@@ -24,7 +24,7 @@ const Register = () => {
                 <LeftSideImg src={`${logoNoBackground}`} />
                 <LeftSideText>
                     <Text>Start logging those movies today.</Text>
-                    <Text>Everyone's dieing to know what you really thought of Ghostbusters (2016)</Text>
+                    <Text>Everyone's dying to know what you really thought of Ghostbusters (2016)</Text>
                 </LeftSideText>
                 {!isAuthenticated ?
                 <SubmitButton onClick={handleClick}>Create Account</SubmitButton>
